@@ -1,0 +1,222 @@
+@lost gutter #{$lost-gutter};
+@lost flexbox flex;
+
+.grid-container{
+  lost-center: $grid-small;
+  lost-flex-container: column;
+
+  @include media-medium() {
+    lost-center: $grid-medium;
+    lost-flex-container: column;
+  }
+
+  @include media-large() {
+    lost-center: $grid-large;
+    lost-flex-container: column;
+  }
+
+  @include media-x-large() {
+    lost-center: $grid-x-large;
+    lost-flex-container: column;
+  }
+}
+
+.row{
+  lost-column: 1/1 flex;
+  lost-flex-container: row;
+  lost-utility: clearfix;
+  box-sizing: border-box;
+
+  &.panel{
+    padding-top: $lost-gutter;
+    padding-left: $lost-gutter;
+    padding-right: $lost-gutter;
+    background-color: color(secondary, base);
+    margin-top: $lost-gutter / 2;
+    margin-bottom: $lost-gutter / 2;
+  }
+}
+
+.column{
+  flex: 1;
+  margin-bottom: $lost-gutter;
+  margin-right: $lost-gutter;
+  box-sizing: border-box;
+  &.fix{
+    margin-right: $lost-gutter !important;
+  }
+  &.clear{
+    margin-right: 0 !important;
+  }
+  &:last-child{
+    margin-right: 0;
+  }
+
+  //TEST BOXES
+  &.box{
+    background-color: color(primary, base);
+    height: 250px;
+    color: white;
+  }
+  &.box-mini{
+    @extend .box;
+    height: 60px;
+  }
+
+  &.box-white{
+    @extend .box;
+    background-color: color(secondary, dark);
+  }
+  &.box-white-mini{
+    @extend .box-white;
+    height: 60px;
+  }
+
+  //GRIDS
+  @for $i from 1 through $lost-grid-columns-small {
+    @include media-small() {
+      &.small-#{$i}{
+        lost-column: 1/#{($lost-grid-columns-small/$i)};
+      }
+    }
+  }
+
+  @for $i from 1 through $lost-grid-columns-medium {
+    @include media-medium() {
+      &.medium-#{$i}{
+        lost-column: 1/#{($lost-grid-columns-medium/$i)} #{$lost-grid-columns-medium/$i};
+      }
+    }
+  }
+
+  @for $i from 1 through $lost-grid-columns-medium {
+    @include media-large() {
+      &.large-#{$i}{
+        lost-column: 1/#{($lost-grid-columns-medium/$i)} #{$lost-grid-columns-medium/$i};
+      }
+    }
+  }
+
+}
+
+//POSITION ELEMENTS
+.display-flex{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+//FLEX-ROW, FLEX-COLUMN
+.flex-column{
+  display: flex;
+  flex-flow: column;
+}
+
+.flex-row{
+  display: flex;
+  flex-flow: row;
+}
+
+//ALIGN TOP, BOTTOM, MIDDLE
+$align-y:(
+  top: flex-start,
+  bottom: flex-end,
+  middle: center
+);
+
+@each $y, $value in $align-y{
+  .align-#{$y}{
+    @extend .display-flex;
+    align-items: #{$value};
+  }
+}
+
+//ALIGN CENTER, LEFT, RIGHT, SPACE-BETWEEN, SPACE-AROUND
+$align-x:(
+  left: flex-start,
+  center: center,
+  right: flex-end,
+  justify: space-between,
+  spaced: space-around
+);
+
+@each $x, $value in $align-x{
+  .align-#{$x}{
+    @extend .display-flex;
+    justify-content: #{$value};
+
+    @if ($x == justify or $x == spaced){
+      position: relative;
+      &::after, &::before{
+        content: none;
+      }
+    }
+  }
+}
+
+//UTILITIES ALIGNMENT
+.totaly-center{
+  @extend .display-flex;
+  align-items: center;
+  justify-content: center;
+  &.childrens-too{
+    & > * {
+      @extend .display-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+//ALIGN SELF
+$align-selfs: (
+  bottom: flex-end,
+  middle: center,
+  top: flex-start
+);
+
+@each $self, $value in $align-selfs{
+  .align-self-#{$self}{
+    align-self: $value;
+  }
+}
+
+//ALIGN MIDDLE-LEFT, MIDDLE-RIGHT, MIDDLE-CENTER, MIDDLE-JUSTIFY, MIDDLE-SPACED
+@each $key, $value in $align-x{
+  .align-middle-#{$key}{
+    @extend .display-flex;
+    justify-content: #{$value};
+    align-items: center;
+    & .column{
+      margin-bottom: 0;
+    }
+  }
+}
+
+//ALIGN TOP-LEFT, TOP-RIGHT, TOP-CENTER, TOP-JUSTIFY, TOP-SPACED
+@each $key, $value in $align-x{
+  .align-top-#{$key}{
+    @extend .display-flex;
+    justify-content: #{$value};
+    align-items: flex-start;
+    & .column{
+      margin-bottom: 0;
+    }
+  }
+}
+
+//ALIGN BOTTOM-LEFT, BOTTOM-RIGHT, BOTTOM-CENTER, BOTTOM-JUSTIFY, BOTTOM-SPACED
+@each $key, $value in $align-x{
+  .align-bottom-#{$key}{
+    @extend .display-flex;
+    justify-content: #{$value};
+    align-items: flex-end;
+    & .column{
+      margin-bottom: 0;
+    }
+  }
+}
+
+//Utilities
+.shrink{
+  flex: 0 0 auto;
+}

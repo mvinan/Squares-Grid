@@ -1,0 +1,38 @@
+/********************
+  * POSTCSS SETTINGS *
+  ********************/
+//LOST
+$lost-gutter: 20px;
+$lost-grid-columns-small: 8;
+$lost-grid-columns-medium: 12;
+
+//BREAKPOINTS CUSTOM QUERIES
+$breakpoint-small:   768px;  // <
+$breakpoint-medium:  768px;  // >=
+$breakpoint-large:   992px;  // >=
+$breakpoint-x-large: 1200px; // >=
+
+//GRID CONTAINERS
+$grid-small:   90%;
+$grid-medium:  750px;
+$grid-large:   970px;
+$grid-x-large: 1170px;
+
+/********************
+  * REGULAR SETTINGS *
+  ********************/
+//COLOR PALETTE
+$color-primary:      $royal-blue;   //PRIMARY COLOR
+$color-secondary:    $silver-sand;  //SECONDARY COLOR
+$color-default:      $gray;         //DEFAULT COLOR
+$color-shade-amount: 15%;
+$color-trans-amount: 0.5;
+
+//COLOR TEXT
+$color-text-base:      $black;         //TEXT BASE COLOR
+$color-text-link:      $royal-blue;    //TEXT LINK COLOR
+$color-text-secondary: $color-primary; //TEXT SECONDARY COLOR
+
+//TYPOGRAPHY FAMILIES
+$font-family-text:    "Open Sans", "Helvetica Neue", sans-serif;
+$font-family-display: "Avenir Next", sans-serif;

@@ -1,0 +1,111 @@
+.create{
+  background-color: color(secondary, base);
+  padding-bottom: 100px;
+  .panel{
+    box-shadow: 0px 0px 34px -10px rgba(149,150,150, 0.5);
+    background-color: white;
+    padding: 20px;
+  }
+  .divider{
+    background-color: color(secondary, trans);
+    padding: 0 15px;
+    .column{
+      margin-bottom: 10px;
+    }
+    h4{
+      margin-bottom: 0;
+      margin-top: 10px;
+      letter-spacing: 1px;
+    }
+  }
+
+}
+
+.service{
+  position: relative;
+  textarea{
+    height: 50px;
+  }
+  &-description{
+    position: relative;
+    margin-bottom: 0;
+    .item-price{
+      text-align: right;
+    }
+  }
+}
+
+.button-remove{
+  $background-color-button: $red;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(35px, -50%);
+  background-color: $background-color-button;
+  width: 23px;
+  height: 23px;
+  color: white;
+  border-radius: 100%;
+  transition: 0.2s ease;
+  i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    font-size: $font-size-small;
+  }
+  &:hover{
+    background-color: darken($background-color-button, 15%);
+  }
+}
+
+.button-add{
+  @extend .button-remove;
+  $background-color-button: color(primary, base);
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(-35px, 0);
+  background-color: $background-color-button;
+  i{
+    transform: translate(-48%, -45%);
+  }
+  &:hover{
+    background-color: darken($background-color-button, 15%);
+  }
+}
+
+.calculator{
+  margin-top: 60px;
+  &-subtotal,
+  &-total,
+  &-iva{
+    .column{
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &-iva{
+    margin-top: 20px;
+    .column{
+      margin-top: 15px;
+    }
+  }
+
+  &-button{
+    margin-top: 60px;
+  }
+  &-addDiscount{
+    font-size: $font-size-small;
+    color: color(primary, base);
+    text-align: right;
+  }
+
+  #input-discount{
+    text-align: right;
+    color: color(primary, base);
+  }
+}

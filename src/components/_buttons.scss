@@ -1,0 +1,67 @@
+.button {
+  padding: 6px 34px 7px;
+  border-width: 2px;
+  margin: 10px;
+  box-sizing: border-box;
+  border-style: solid;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: $font-size-small;
+  font-weight: $font-weight-regular;
+
+  //DEFAULT
+  &.default{
+    $color-base: color(default, base);
+    $color-hover: color(default, trans);
+    $color-text-base: color(text, light);
+
+    background-color: $color-base;
+    color: $color-text-base;
+    border-color: $color-base;
+    &:hover{
+      background-color: $color-hover;
+      border-color: $color-hover;
+    }
+    &.phantom{
+      @include make-ghost-button($color-base);
+    }
+  }
+
+  //PRIMARY
+  &.primary{
+    $color-base: color(primary, base);
+    $color-hover: color(primary, dark);
+    $color-text-base: color(text, light);
+
+    background-color: $color-base;
+    color: $color-text-base;
+    border-color: $color-base;
+    &:hover{
+      background-color: $color-hover;
+      border-color: $color-hover;
+    }
+    &.phantom{
+      @include make-ghost-button($color-base);
+    }
+  }
+
+  //SECONDARY
+  &.secondary{
+    $color-base: color(secondary, base);
+    $color-hover: color(secondary, dark);
+    $color-text-base: color(primary, base);
+
+    background-color: $color-base;
+    color: $color-text-base;
+    border-color: $color-base;
+    &:hover{
+      background-color: $color-hover;
+      border-color: $color-hover;
+    }
+    &.phantom{
+      @include make-ghost-button($color-base, dark);
+    }
+  }
+}

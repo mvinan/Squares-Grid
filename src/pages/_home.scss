@@ -1,0 +1,13 @@
+.home{
+
+}
+
+.hero{
+  height: 80%;
+  &-image{
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}

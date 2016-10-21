@@ -1,0 +1,45 @@
+input{
+  $background-color-input: transparentize(color(secondary, base), 0.5);
+
+  padding: 15px 5px;
+  border: none;
+  border-bottom-width: 2px;
+  border-bottom-color: color(secondary, dark);
+  border-bottom-style: solid;
+  transition: 0.3s ease-in-out;
+  font-size: $font-size-small;
+  color: $black;
+  &:focus, &:hover{
+    outline: none;
+    background-color: $background-color-input;
+    border-bottom-color: color(primary, base);
+  }
+
+}
+
+input::placeholder{
+  color: color(default, trans);
+  font-size: $font-size-small;
+}
+
+.input-group{
+  margin-bottom: 15px;
+  padding: 10px;
+  flex-direction: column;
+  display: flex;
+  .column{
+    margin-bottom: 0;
+  }
+}
+
+.column{
+  input{
+    width: 100%;
+  }
+}
+
+textarea{
+  @extend input;
+  resize: vertical;
+  transition: background-color 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
+}

@@ -1,0 +1,45 @@
+.navigationbar{
+  padding: $lost-gutter 0;
+  lost-column: 1/1 flex;
+  lost-flex-container: row;
+  lost-utility: clearfix;
+  box-sizing: border-box;
+  align-items: center;
+
+  .brand{
+    flex: 0 0 auto;
+    padding: 0 $lost-gutter;
+    h1{
+      margin: 0;
+    }
+  }
+
+  .menu{
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    &.right{
+      .menu-list{
+        justify-content: flex-end;
+      }
+    }
+    &.left{
+      .menu-list{
+        justify-content: flex-start;
+      }
+    }
+    &.center{
+      .menu-list{
+        justify-content: center;
+      }
+    }
+  }
+  .menu-list{
+    flex: 1;
+    display: flex;
+    li{
+      box-sizing: border-box;
+      margin-right: $lost-gutter;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+//SETTINGS COLORS
+$colors: (
+  primary: (
+    base: $color-primary,
+    light: lighten($color-primary, $color-shade-amount),
+    dark: adjust_hue(saturate(darken($color-primary, 4), 45), 360),
+    trans: transparentize($color-primary, $color-trans-amount)
+  ),
+
+  secondary: (
+    base: $color-secondary,
+    light: lighten($color-secondary, $color-shade-amount),
+    dark:  darken($color-secondary, $color-shade-amount - 5%),
+    trans: transparentize($color-secondary, $color-trans-amount)
+  ),
+
+  default: (
+    base: $color-default,
+    light: lighten($color-default, $color-shade-amount),
+    dark: adjust_hue(saturate(darken($color-default, 4), 45), 360),
+    trans: transparentize($color-default, $color-trans-amount)
+  ),
+
+  text:(
+    base: $color-text-base,
+    secondary: $color-text-secondary,
+    light: lighten($color-text-base, 100%),
+    link: $color-text-link,
+    p: lighten($color-text-base, $color-shade-amount)
+  )
+)
