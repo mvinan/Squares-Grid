@@ -5,7 +5,7 @@
 var webpack = require('webpack')
 var path = require('path')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
-var extractCSS = new ExtractTextPlugin('css/[name].css')
+var extractCSS = new ExtractTextPlugin('css/squares-grid.min.css')
 
 // Plugins POSTCSS
 var lost = require('lost') //GridSystem with PostCSS
@@ -16,8 +16,8 @@ var customMedias = require('postcss-custom-media') //Crea media queries custom c
 
 // Routes
 
-var BUILD_DIR = path.join(__dirname, 'public') //Outpout
-var APP_DIR = path.join(__dirname, 'app') //Input
+var BUILD_DIR = path.join(__dirname, 'dist') //Outpout
+var APP_DIR = path.join(__dirname, 'src') //Input
 
 var config = {
   entry: APP_DIR,

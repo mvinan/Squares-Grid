@@ -1,0 +1,3 @@
+# Squares Grid
+
+Documentation in progress...
