@@ -20,11 +20,19 @@ var BUILD_DIR = path.join(__dirname, 'dist') //Outpout
 var APP_DIR = path.join(__dirname, 'src') //Input
 
 var config = {
+  resolve: {
+    extensions: ['', '.js', '.sass', '.scss', '.html']
+  },
   entry: APP_DIR,
-  cache: true,
   output: {
     path: BUILD_DIR,
-    filename: 'js/[name].bundle.js'
+    filename: 'js/[name].bundle.js',
+    publicPath: '/'
+  },
+  devServer: {
+    host: '0.0.0.0',
+    port: 3000,
+    inline: true
   },
   module: {
     loaders: [{
