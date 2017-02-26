@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Squares - Grid</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="css/squares-grid.min.css">
+
+  <style>
+    .box-child{
+      border-radius: 100%;
+      background-color: yellow;
+      height: 20px;
+      width: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div>
+      <h1>Squares Grid</h1>
+      <h2>Automatic Columns</h2>
+      <p>The class: <code>column</code> inside class: <code>row</code> get an automatic width of the <code>row</code></p>
+    </div>
+    <xmp class="row panel" style="padding-top: 0;">
+      <div class="row">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+      </div>
+    </xmp>
+    <div class="row panel">
+      <div class="column box-mini"></div>
+      <div class="column box-mini"></div>
+      <div class="column box-mini"></div>
+      <div class="column box-mini"></div>
+      <div class="column box-mini"></div>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <div>
+      <h2>The Grid</h2>
+      <p>If you give width to column, add class <code>small-x</code> for small devices | <code>medium-x</code> for medium devices | <code>large-x</code> for large devices</p>
+      <p>The <strong>grid</strong> is made up of 12 columns</p>
+    </div>
+    <xmp class="row panel" style="padding-top: 0;">
+      <div class="row">
+        <div class="column medium-6"></div>
+        <div class="column medium-6"></div>
+      </div>
+
+      <div class="row">
+        <div class="column small-6 medium-6 align-middle-center">6</div>
+        <div class="column small-6 medium-6 align-middle-center">6</div>
+      </div>
+
+      <!-- Col-4 -->
+      <div class="row">
+        <div class="column small-4 medium-4 align-middle-center">4</div>
+        <div class="column small-4 medium-4 align-middle-center">4</div>
+        <div class="column small-4 medium-4 align-middle-center">4</div>
+      </div>
+
+        <!-- Col-3  -->
+      <div class="row">
+        <div class="column small-3 medium-3 align-middle-center">3</div>
+        <div class="column small-3 medium-3 align-middle-center">3</div>
+        <div class="column small-3 medium-3 align-middle-center">3</div>
+        <div class="column small-3 medium-3 align-middle-center">3</div>
+      </div>
+
+        <!-- Col 2  -->
+      <div class="row">
+        <div class="column small-2 medium-2 align-middle-center">2</div>
+        <div class="column small-2 medium-2 align-middle-center">2</div>
+        <div class="column small-2 medium-2 align-middle-center">2</div>
+        <div class="column small-2 medium-2 align-middle-center">2</div>
+        <div class="column small-2 medium-2 align-middle-center">2</div>
+        <div class="column small-2 medium-2 align-middle-center">2</div>
+      </div>
+
+        <!-- Col 1 -->
+      <div class="row">
+        <div class="column small-1 medium-1 align-middle-center">1</div>
+        <div class="column small-1 medium-1 align-middle-center">1</div>
+        <div class="column small-1 medium-1 align-middle-center">1</div>
+        <div class="column small-1 medium-1 align-middle-center">1</div>
+        <div class="column small-1 medium-1 align-middle-center">1</div>
+        <div class="column small-1 medium-1 align-middle-center">1</div>
+        <div class="column small-1 medium-1 align-middle-center">1</div>
+        <div class="column small-1 medium-1 align-middle-center">1</div>
+        <div class="column small-1 medium-1 align-middle-center">1</div>
+        <div class="column small-1 medium-1 align-middle-center">1</div>
+        <div class="column small-1 medium-1 align-middle-center">1</div>
+        <div class="column small-1 medium-1 align-middle-center">1</div>
+      </div>
+    </xmp>
+    <div class="row">
+      <div class="column small-6 medium-6 box-mini align-middle-center">6</div>
+      <div class="column small-6 medium-6 box-mini align-middle-center">6</div>
+    </div>
+
+      <!-- Col-4 -->
+    <div class="row">
+      <div class="column small-4 medium-4 box-mini align-middle-center">4</div>
+      <div class="column small-4 medium-4 box-mini align-middle-center">4</div>
+      <div class="column small-4 medium-4 box-mini align-middle-center">4</div>
+    </div>
+
+      <!-- Col-3  -->
+    <div class="row">
+      <div class="column small-3 medium-3 box-mini align-middle-center">3</div>
+      <div class="column small-3 medium-3 box-mini align-middle-center">3</div>
+      <div class="column small-3 medium-3 box-mini align-middle-center">3</div>
+      <div class="column small-3 medium-3 box-mini align-middle-center">3</div>
+    </div>
+
+      <!-- Col 2  -->
+    <div class="row">
+      <div class="column small-2 medium-2 box-mini align-middle-center">2</div>
+      <div class="column small-2 medium-2 box-mini align-middle-center">2</div>
+      <div class="column small-2 medium-2 box-mini align-middle-center">2</div>
+      <div class="column small-2 medium-2 box-mini align-middle-center">2</div>
+      <div class="column small-2 medium-2 box-mini align-middle-center">2</div>
+      <div class="column small-2 medium-2 box-mini align-middle-center">2</div>
+    </div>
+
+      <!-- Col 1 -->
+    <div class="row">
+      <div class="column small-1 medium-1 box-mini align-middle-center">1</div>
+      <div class="column small-1 medium-1 box-mini align-middle-center">1</div>
+      <div class="column small-1 medium-1 box-mini align-middle-center">1</div>
+      <div class="column small-1 medium-1 box-mini align-middle-center">1</div>
+      <div class="column small-1 medium-1 box-mini align-middle-center">1</div>
+      <div class="column small-1 medium-1 box-mini align-middle-center">1</div>
+      <div class="column small-1 medium-1 box-mini align-middle-center">1</div>
+      <div class="column small-1 medium-1 box-mini align-middle-center">1</div>
+      <div class="column small-1 medium-1 box-mini align-middle-center">1</div>
+      <div class="column small-1 medium-1 box-mini align-middle-center">1</div>
+      <div class="column small-1 medium-1 box-mini align-middle-center">1</div>
+      <div class="column small-1 medium-1 box-mini align-middle-center">1</div>
+    </div>
+
+      <!-- Diferent Columns  -->
+    <div class="row">
+      <div class="column small-6 medium-2 box-mini align-middle-center">2</div>
+      <div class="column small-6 medium-10 box-mini align-middle-center">10</div>
+    </div>
+    <div class="row">
+      <div class="column small-6 medium-7 box-mini align-middle-center">7</div>
+      <div class="column small-6 medium-5 box-mini align-middle-center">5</div>
+    </div>
+  </div>
+
+  <div class="grid-container">
+    <h2>Alignment</h2>
+    <!-- Align Center -->
+    <h3>Align-center</h3>
+    <xmp>
+      <div class="row align-center">
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+      </div>
+    </xmp>
+    <div class="row panel align-center">
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+    </div>
+
+    <!-- Align Left -->
+    <h3>Align-left</h3>
+    <xmp>
+      <div class="row align-left">
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+      </div>
+    </xmp>
+    <div class="panel row align-left">
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+    </div>
+
+    <!-- Align Right -->
+    <h3>Align-Right</h3>
+    <xmp>
+      <div class="row align-right">
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+      </div>
+    </xmp>
+    <div class="panel row align-right">
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+    </div>
+
+    <!-- Align Justify -->
+    <h3>Align-justify</h3>
+    <xmp>
+      <div class="row align-justify">
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+      </div>
+    </xmp>
+    <div class="panel row align-justify">
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+    </div>
+
+    <!-- Align Justify -->
+    <h3>Align-spaced</h3>
+    <xmp>
+      <div class="row align-spaced">
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+      </div>
+    </xmp>
+    <div class="panel row align-spaced">
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+    </div>
+
+    <!-- Align Self -->
+    <h3>Align-self-middle | align-self-bottom | align-self-top</h3>
+    <xmp>
+      <div class="row align-spaced">
+        <div class="column medium-2 align-self-middle"></div>
+        <div class="column medium-2 align-self-bottom"></div>
+        <div class="column medium-2 align-self-top"></div>
+      </div>
+    </xmp>
+    <div class="panel row align-spaced" style="height: 200px;">
+      <div class="column box-mini medium-2 align-self-middle totaly-center">middle</div>
+      <div class="column box-mini medium-2 align-self-bottom totaly-center">bottom</div>
+      <div class="column box-mini medium-2 align-self-top totaly-center">top</div>
+    </div>
+
+    <!-- Align Top -->
+    <h3>Align-top</h3>
+    <xmp>
+      <div class="row align-top">
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+      </div>
+    </xmp>
+    <div class="panel row align-top" style="height: 200px;">
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+    </div>
+
+    <!-- Align Bottom -->
+    <h3>Align-bottom</h3>
+    <xmp>
+      <div class="row align-bottom">
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+      </div>
+    </xmp>
+    <div class="panel row align-bottom" style="height: 200px;">
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+    </div>
+
+    <!-- Align Bottom -->
+    <h3>Align-middle</h3>
+    <xmp>
+      <div class="row align-middle">
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+        <div class="column medium-2"></div>
+      </div>
+    </xmp>
+    <div class="panel row align-middle" style="height: 200px;">
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+      <div class="column box-mini medium-2"></div>
+    </div>
+
+    <!-- Align-middle-x -->
+    <h3>Align-middle-left | align-middle-right | align-middle-center</h3>
+    <xmp>
+      <div class="row align-middle-left">
+        <div class="column medium-4"></div>
+      </div>
+      <div class="row align-middle-right">
+        <div class="column medium-4"></div>
+      </div>
+      <div class="row align-middle-center">
+        <div class="column medium-4"></div>
+      </div>
+    </xmp>
+    <div class="row">
+      <div class="panel row align-middle-left column" style="height: 200px; border: 1px solid grey;">
+        <div class="column medium-4 box-mini"></div>
+      </div>
+      <div class="panel row align-middle-right column" style="height: 200px; border: 1px solid grey;">
+        <div class="column medium-4 box-mini"></div>
+      </div>
+      <div class="panel row align-middle-center column" style="height: 200px; border: 1px solid grey;">
+        <div class="column medium-4 box-mini"></div>
+      </div>
+    </div>
+
+    <!-- Align-top-x -->
+    <h3>Align-top-left | Align-top-right | Align-top-center</h3>
+    <xmp>
+      <div class="row align-top-left">
+        <div class="column medium-4"></div>
+      </div>
+      <div class="row align-top-right">
+        <div class="column medium-4"></div>
+      </div>
+      <div class="row align-top-center">
+        <div class="column medium-4"></div>
+      </div>
+    </xmp>
+    <div class="row">
+      <div class="panel row align-top-left column" style="height: 200px; border: 1px solid grey;">
+        <div class="column medium-4 box-mini"></div>
+      </div>
+      <div class="panel row align-top-right column" style="height: 200px; border: 1px solid grey;">
+        <div class="column medium-4 box-mini"></div>
+      </div>
+      <div class="panel row align-top-center column" style="height: 200px; border: 1px solid grey;">
+        <div class="column medium-4 box-mini"></div>
+      </div>
+    </div>
+
+    <!-- Align-bottom-x -->
+    <h3>Align-bottom-left | Align-bottom-right | Align-bottom-center</h3>
+    <xmp>
+      <div class="row align-bottom-left">
+        <div class="column medium-4"></div>
+      </div>
+      <div class="row align-bottom-right">
+        <div class="column medium-4"></div>
+      </div>
+      <div class="row align-bottom-center">
+        <div class="column medium-4"></div>
+      </div>
+    </xmp>
+    <div class="row">
+      <div class="panel row align-bottom-left column" style="height: 200px; border: 1px solid grey;">
+        <div class="column medium-4 box-mini"></div>
+      </div>
+      <div class="panel row align-bottom-right column" style="height: 200px; border: 1px solid grey;">
+        <div class="column medium-4 box-mini"></div>
+      </div>
+      <div class="panel row align-bottom-center column" style="height: 200px; border: 1px solid grey;">
+        <div class="column medium-4 box-mini"></div>
+      </div>
+    </div>
+
+    <!-- Align-center -->
+    <h3>Utility: Totaly center & childrens</h3>
+    <xmp>
+      <div class="row totaly-center">
+        <div class="column medium-4">Child</div>
+      </div>
+      <div class="row totaly-center childrens-too">
+        <div class="column medium-4">Child</div>
+      </div>
+      <div class="row totaly-center">
+        <div class="column medium-4">Child</div>
+      </div>
+
+      Other utilities:
+      .display-flex: give flex-box to some elements without flex
+      .flex-column: give direction column and flex to element
+      .flex-row: give direction row and flex to element
+    </xmp>
+    <div class="row">
+      <div class="panel row column totaly-center" style="height: 200px; border: 1px solid grey;">
+        <div class="column medium-4 box-mini"><div class="box-child"></div></div>
+      </div>
+      <div class="panel row column totaly-center childrens-too" style="height: 200px; border: 1px solid grey;">
+        <div class="column medium-4 box-mini"><div class="box-child"></div></div>
+      </div>
+      <div class="panel row column totaly-center" style="height: 200px; border: 1px solid grey;">
+        <div class="column medium-4 box-mini"><div class="box-child"></div></div>
+      </div>
+    </div>
+
+  </div>
+  <script src="js/main.bundle.js"></script>
+</body>
+</html>
